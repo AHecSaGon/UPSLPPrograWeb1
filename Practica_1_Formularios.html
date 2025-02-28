@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Practica 1 - Formularios</title>
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+</head>
+<body style="background-color: #add8e6;">
+    <form action="" method="post" enctype="text/plain">
+        <fieldset style="text-align: center;">
+            <legend style="text-align: left;">Informacion general del cliente</legend>
+            <label for="name">Nombre*: </label>
+            <input type="text" name="name" id="name" required>
+            <label for="lastName">Apellido Paterno: </label>
+            <input type="text" name="lastName" id="lastName">
+            <label for="lastName2">Apellido Materno: </label>
+            <input type="text" name="lastName2" id="lastName2">
+            <br><br>
+            <label for="username">Nombre de usuario*: </label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Contraseña*: </label>
+            <input type="password" name="password" id="password" required>
+            <label for="registerDate">Fecha de registro: </label>
+            <input type="date" name="registerDate" id="registerDate">
+        </fieldset>
+        <fieldset style="text-align: center;">
+            <legend style="text-align: left;">Datos de facturacion</legend>
+            <label for="country">País: </label>
+            <select name="country" id="country">
+                <optgroup>
+                    <option selected>Mexico</option>
+                    <option>Estados Unidos</option>
+                    <option>Canada</option>
+                    <option>Colombia</option>
+                    <option>España</option>
+                    <option>Reino Unido</option>
+                </optgroup>
+            </select>
+        </fieldset>
+    </form>    
+
+
+
+
+
+
+    <footer><a href="index.html" style="font-size: 75%;">Regresar al portafolio de evidencias</a></footer>
+</body>
+</html>
