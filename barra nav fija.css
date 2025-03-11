@@ -1,0 +1,44 @@
+ul
+{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 23%;
+    height: 100%;
+    background-color: lightgreen;
+    position: fixed;
+}
+
+li a
+{
+    background-color: lightgreen;
+    color: white;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover
+{
+    background-color: green;
+}
+
+li .activo
+{
+    background-color: darkgreen;
+}
+
+.capa1
+{
+    margin-left: 25%;
+    padding: 12px;
+
+}
+
+.fuenteTitulo
+{
+    font-family: "Big Shoulders Stencil", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
