@@ -42,3 +42,14 @@ li .activo
     font-weight: <weight>;
     font-style: normal;
 }
+
+@font-face {
+    font-family: "Roboto";
+    src: url(Roboto/Roboto-VariableFont_wdth\,wght.ttf)
+    format("truetype");
+}
+
+p
+{
+    font-family: "Roboto";
+}
