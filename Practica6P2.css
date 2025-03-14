@@ -1,0 +1,26 @@
+.header
+{
+    display: inline;
+    font-size: 85%;
+}
+
+.header #welcome
+{
+    margin-left: 1%;
+    margin-right: auto;
+    color: #466990;
+}
+
+.header #help
+{
+}
+
+.header #search
+{
+}
+
+
+.vl1 
+{
+    border-left: 2px ridge #819baf;
+}
