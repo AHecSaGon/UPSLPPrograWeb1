@@ -10,9 +10,23 @@
 </head>
 <body>
     <header class="header">
-        <div id="welcome"><b>Bienvenido</b> (0123456)</div>
-        <div id="help"><b><a href="">Ayuda</a> <div class="vl1">.</div></b></div>
-        <div id="search"></div>
+        <span id="welcome"><b>Bienvenido</b> (0123456)</span>
+        <span id="search">
+            <form action="">
+                <select name="category" id="category" style="margin-left: 5%;">
+                    <optgroup>
+                        <option selected>Catalogo</option>
+                        <option>Directorio</option>
+                        <option>Secciones del curso</option>
+                    </optgroup>
+                </select>
+                <input type="text" name="searchtxt" id="searchtxt" style="margin-left: 1%;"> 
+                <input type="submit" value="Buscar" style="margin-left: 1%;">
+            </form>
+        </span>
+        <span id="help"><b><a href="">Ayuda</a>&emsp;|&emsp;<a href="">Cerrar sesión</a></b></span>
+        <br>
+        <img src="img/logo_self_service2.png" alt="" style="padding: 10px;">
     </header>
 </body>
 </html>

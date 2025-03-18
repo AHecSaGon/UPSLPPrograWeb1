@@ -13,14 +13,32 @@
 
 .header #help
 {
+    float: right;
+    color: #819baf;
+}
+
+.header #help a
+{
+    color: #555566;
 }
 
 .header #search
 {
+    float: right;
+    border-left: 1px solid #003366;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 36%;
 }
 
-
-.vl1 
+.header input[type=submit]
 {
-    border-left: 2px ridge #819baf;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #a0a2a5;
+    color: #555566;
+    border: 1px solid;
+    border-color: #bfbfbf #919499 #919499 #bfbfbf;
+    color: #555566;
 }
