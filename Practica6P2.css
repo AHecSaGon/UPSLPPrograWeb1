@@ -149,4 +149,15 @@ footer
     width: 85%;
     margin-left: 17%;
     padding-top: 15px;
+    text-align: center;
+}
+
+.content input
+{
+    margin: auto;
+}
+
+.content select
+{
+    margin: auto;
 }
