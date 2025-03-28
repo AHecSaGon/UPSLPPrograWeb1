@@ -1,0 +1,18 @@
+.columnas
+{
+    column-count: 3;
+    column-gap: 30px;
+    column-rule-style: solid;
+    column-rule-color: darkgrey;
+    column-rule-width: 1px;
+}
+
+.titulo1
+{
+    column-span: all;
+}
+
+#imagen
+{
+    visibility: visible;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Columnas con CSS</title>
+    <style type="text/css"></style>
+	<link rel="stylesheet" href="columnas.css">
+</head>
+<body>
+    <div class="columnas">
+        <h1 class="titulo1">Columnas con CSS</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti doloribus ipsam necessitatibus iste quasi quos tenetur qui fugit. Ipsa, ad in velit sint non incidunt vero animi sunt minus architecto!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod corporis vero dolore eaque eius incidunt commodi, nam deserunt, temporibus nisi delectus debitis sint veniam quo at nemo dolor odit perspiciatis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque animi iusto, possimus iure harum, ipsam recusandae incidunt, ipsum officiis quasi dignissimos dolorum. Debitis facilis dicta commodi nam alias adipisci reprehenderit.</p>
+    </div>
+
+    <img src="img/Waluigi.png" id="imagen" class="imagen1"> <br> 
+    <button onclick="toggleVisibility()" ondblclick="resizeImg()">Mostrar/Ocultar Imagen</button>
+    <script type="text/javascript">
+        function toggleVisibility()
+        {
+            var visible = document.getElementById("imagen").style.visibility;
+            if(visible === "hidden")
+            {
+               visible = "visible" 
+            }
+            else
+            {
+                visible = "hidden"
+            }
+            document.getElementById("imagen").style.visibility = visible;
+        }
+
+        function getRandomInt(min, max) 
+        {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function resizeImg()
+        {
+            var scale =  getRandomInt(1,100);
+            var scalePercent = scale + "%";
+            document.getElementById("imagen").style.scale = scalePercent;
+        }
+    </script>
+</body>
+</html>
