@@ -1,0 +1,30 @@
+body
+{
+    font-family: "Roboto";
+    text-align: center;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(Roboto/Roboto-VariableFont_wdth\,wght.ttf)
+    format("truetype");
+}
+
+.code
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    border: 1px solid;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+}
+
+.content
+{
+    width: 60%;
+    border: 1px solid;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+}
