@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>Unidades de Medida en CSS</h1>
+    <h3>Hector Adrian Sanjuanero Gonzalez - 187283</h3>
     <div class="content">
         <p>
             CSS cuenta con diferentes diferentes unidades para representar longitud.<br>
@@ -39,8 +40,183 @@
     <h2>Unidades de medida absolutas</h2>
     <div class="content">
         <p>
-            Las unidades de 
+            Las unidades de medida absolutas son aquellas cuya longitud siempre es fija. No es recomendado usarlas en situaciones en las que
+            las dimensiones de la pantalla puedan cambiar ya que esto podria romper la visualizacion del contenido.
+            <br>
+            Las unidades de medida absolutas son las siguientes:
         </p>
+        <table class="unitTable">
+            <thead>
+                <tr>
+                    <th style="width: 10%;"><b>Unidad</b></th>
+                    <th><b>Descripcion</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>cm</td>
+                    <td>Centimetros</td>
+                </tr>
+                <tr>
+                    <td>mm</td>
+                    <td>Milimetros</td>
+                </tr>
+                <tr>
+                    <td>in</td>
+                    <td>Pulgadas</td>
+                </tr>
+                <tr>
+                    <td>pt</td>
+                    <td>Puntos de impresion (1pt = 1/72 in)</td>
+                </tr>
+                <tr>
+                    <td>pc</td>
+                    <td>Picas (1pc = 12pt)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Algunos ejemplos de su uso son:
+        </p>
+        <div class="examples">
+            <div class="code" style="width: 40%; margin-left: auto; display: flex;">
+                p <br>
+                { <br>
+                &emsp;width: 5cm; <br>
+                &emsp;background-color: aquamarine; <br>
+                }
+            </div>
+            <div style="margin-right: auto;">
+                <p style="width: 5cm;">
+                    Este es un parrafo con un ancho de 5cm
+                </p>
+            </div>
+            <div style="flex-basis: 100%; height: 30px;"></div>
+            <div class="code" style="width: 40%; margin-left: auto;">
+                p <br>
+                { <br>
+                &emsp;width: 45mm; <br>
+                &emsp;background-color: aquamarine; <br>
+                }
+            </div>
+            <div style="margin-right: auto;">
+                <p style="width: 45mm; ">
+                    Este es un parrafo con un ancho de 45mm
+                </p>
+            </div>
+            <div style="flex-basis: 100%; height: 30px;"></div>
+            <div class="code" style="width: 40%; margin-left: auto;">
+                p <br>
+                { <br>
+                &emsp;width: 3in; <br>
+                &emsp;background-color: aquamarine; <br>
+                }
+            </div>
+            <div style="margin-right: auto;">
+                <p style="width: 3in; ">
+                    Este es un parrafo con un ancho de 3in
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Unidades de medida relativas</h2>
+    <div class="content">
+        <p>
+            Las unidades de medida absolutas son aquellas cuya longitud sera realtiva a algun elemento del sistema. Son recomendadas cuando se
+            sabe que el dispositivo en el que se visualizara la pagina web no siempre sera el mismo
+            <br>
+            Las unidades de medida relativas son las siguientes:
+        </p>
+        <table class="unitTable">
+            <thead>
+                <tr>
+                    <th style="width: 10%;"><b>Unidad</b></th>
+                    <th><b>Descripcion</b></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>em</td>
+                    <td>Relativo al tamaño de la fuente</td>
+                </tr>
+                <tr>
+                    <td>ex</td>
+                    <td>Relativo al ancho de la fuente (rara vez utilizado)</td>
+                </tr>
+                <tr>
+                    <td>ch</td>
+                    <td>Relativo al ancho del caracter "0"</td>
+                </tr>
+                <tr>
+                    <td>rem</td>
+                    <td>Relativo al tamaño de la fuente del elemento de raiz (body)</td>
+                </tr>
+                <tr>
+                    <td>vw</td>
+                    <td>Relativo al 1% del ancho de la pestaña</td>
+                </tr>
+                <tr>
+                    <td>vh</td>
+                    <td>Relativo al 1% del alto de la pestaña</td>
+                </tr>
+                <tr>
+                    <td>vmin</td>
+                    <td>Relativo al 1% de la dimension mas pequeña de la pestaña</td>
+                </tr>
+                <tr>
+                    <td>vmax</td>
+                    <td>Relativo al 1% de la dimension mas grande de la pestaña</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Relativo al tamaño del elemento padre</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Algunos ejemplos de su uso son:
+        </p>
+        <div class="examples">
+            <div class="code" style="width: 40%; margin-left: auto; display: flex;">
+                p <br>
+                { <br>
+                &emsp;width: 10%; <br>
+                &emsp;background-color: aquamarine; <br>
+                }
+            </div>
+            <div style="margin-right: auto;">
+                <p style="width: 10%;">
+                    Este es un parrafo con un ancho de 10%
+                </p>
+            </div>
+            <div style="flex-basis: 100%; height: 30px;"></div>
+            <div class="code" style="width: 40%; margin-left: auto;">
+                p <br>
+                { <br>
+                &emsp;width: 10vw; <br>
+                &emsp;background-color: aquamarine; <br>
+                }
+            </div>
+            <div style="margin-right: auto;">
+                <p style="width: 10vw; ">
+                    Este es un parrafo con un ancho de 10vw
+                </p>
+            </div>
+            <div style="flex-basis: 100%; height: 30px;"></div>
+            <div class="code" style="width: 40%; margin-left: auto;">
+                p <br>
+                { <br>
+                &emsp;width: 10vh; <br>
+                &emsp;background-color: aquamarine; <br>
+                }
+            </div>
+            <div style="margin-right: auto;">
+                <p style="width: 10vh; ">
+                    Este es un parrafo con un ancho de 10vh
+                </p>
+            </div>
+        </div>
     </div>
 
 </body>
