@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen práctico Parcial 2</title>
+    <link rel="stylesheet" href="Examen Practico P2.css">
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+</head>
+<body>
+    <h1>Examen práctico Parcial 2</h1>
+    <h2>Nombre del alumno(a): Hector Adrian Sanjuanero Gonzalez</h2>
+    <button class="boton" id="boton" onmouseover="toggleVisibility()">Galería de imágenes</button>
+    <div class="galeria" id="galeria">
+        <div id="imagen">
+            <img src="img/Waluigi.png" alt="Imagen 1">
+        </div>
+        <div id="imagen">
+            <img src="img/wario.png" alt="Imagen 2">
+        </div>
+        <div id="imagen">
+            <img src="img/petey.png" alt="Imagen 3">
+        </div>
+        <div id="imagen">
+            <img src="img/huehue.png" alt="Imagen 4">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function toggleVisibility()
+        {
+            var visible = document.getElementById("galeria").style.visibility;
+            if(visible === "hidden")
+            {
+               visible = "visible";
+               document.getElementById("boton").style.backgroundColor = "lightgray";
+               document.getElementById("boton").style.color = "black";
+            }
+            else
+            {
+                visible = "hidden";
+                document.getElementById("boton").style.backgroundColor = "#1f88d9";
+                document.getElementById("boton").style.color = "white";
+            }
+            document.getElementById("galeria").style.visibility = visible;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body
+{
+    background: linear-gradient(cadetblue, darkcyan) no-repeat fixed center;
+    font-family: Roboto, sans-serif;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(Roboto/Roboto-VariableFont_wdth\,wght.ttf)
+    format("truetype");
+}
+
+h1, h2
+{
+    text-align: center;
+}
+
+.boton
+{
+    display: block;
+    background-color: lightgray;
+    border:solid darkgray 2px;
+    margin: auto;
+    padding: 20px;
+    width: 15%;
+    border-radius: 10px;
+    font-size: 2vh;
+    box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.781);
+}
+
+.galeria
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+#imagen
+{
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: #1a1c298f;
+    box-shadow: 5px 5px 10px rgba(36, 36, 36, 0.781);
+}
