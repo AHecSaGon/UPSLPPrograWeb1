@@ -138,3 +138,16 @@ footer a
     font-family: Rodin;
     src: url(assets/fonts/Rodin-Regular.ttf);
 }
+
+#printing {
+    /*
+    position: fixed;
+    right: 0;
+    bottom: 0;*/
+    position: absolute;
+    z-index: -1; 
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+  }
+  
