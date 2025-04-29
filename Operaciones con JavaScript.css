@@ -1,0 +1,38 @@
+body
+{
+    background: linear-gradient(#ecf3fd, #dae2f2) fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=button]
+{
+    background: linear-gradient(#ebf4ef, #d5d8e8);
+    border: #a0aab3 solid 1px;
+    border-radius: 3px;
+    width: 8%;
+    line-height: 30px;
+}
+
+input[type=text]
+{
+    background: linear-gradient(#e7effa, white);
+    border: #a0aab3 solid 1px;
+    border-radius: 3px; 
+    width: 100%;
+    line-height: 50px;
+    font-size: 4vh;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#res
+{
+    background: linear-gradient(#e7effa, white);
+    border: #a0aab3 solid 1px;
+    border-radius: 3px; 
+    width: 100%;
+    line-height: 50px;
+    font-size: 4vh;
+    padding: 5px;
+    box-sizing: border-box;
+}
