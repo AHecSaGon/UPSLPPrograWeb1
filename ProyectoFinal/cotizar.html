@@ -5,6 +5,26 @@
     <title>XTREME 3D</title>
     <style type="text/css"></style>
 	<link rel="stylesheet" href="assets/css/cotizar.css">
+    <script src="jspdf/js/jquery/jquery-1.7.1.min.js"></script>
+    <script src="jspdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script src="jspdf/jspdf.js"></script>
+    <script src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
+    <script src="jspdf/jspdf.plugin.from_html.js"></script>
+    <script>
+        function generar()
+        {
+            var doc = new jsPDF();
+            doc.setFontSize(36);
+            doc.setTextColor(100,150,0);
+            doc.text(30,30,"Hola Mundo");
+            doc.setFontSize(32);
+            doc.setTextColor(150,100,0);
+            doc.text(30,50,"Bienvenido a JavaScript");
+            var string = doc.output('datauristring');
+            $('iframe').attr('src', string);
+        }
+    </script>
 </head>
 <body>
     <div class="contenedor">
@@ -23,9 +43,8 @@
         <div class="navbar">
             <a href="index.html" class="navButton">Inicio</a>
             <a href="" class="navButton">Productos 3D</a>
-            <a href="cotizar.html" class="selected">Diseño 3D</a>
-            <a href="" class="navButton">Impresoras 3D</a>
-            <a href="" class="navButton">Insumos</a>
+            <a href="cotizar.html" class="selected">Cotizar impresion 3D</a>
+            <a href="" class="navButton">Contactanos</a>
         </div>
         <div>
             <form action="mailto:cotizar@xtreme3D.com.mx" method="post">
@@ -41,10 +60,36 @@
                 Color:*
                 <br>
                 <label for="color_green"><span style="color: forestgreen; font-size: 3vh;">&#9632;</span> Verde</label>
-                <input type="radio" name="color" id="color_green" required>
-                <input type="submit" value="">
+                <input type="radio" name="color" id="color_green" required value="color_green">
+                <label for="color_red"><span style="color: red; font-size: 3vh;">&#9632;</span> Rojo</label>
+                <input type="radio" name="color" id="color_red" required value="color_red">
+                <label for="color_lightgray"><span style="color: lightgray; font-size: 3vh;">&#9632;</span> Gris claro</label>
+                <input type="radio" name="color" id="color_lightgray" required value="color_lightgray">
+                <label for="color_block"><span style="color: black; font-size: 3vh;">&#9632;</span> Negro</label>
+                <input type="radio" name="color" id="color_black" required value="color_black">
+                <br><br>
+                Altura de capa:* <br>
+                <label for="height_10mm">Fino (10mm)</label>
+                <input type="radio" name="height" id="height_10mm" value="height_10mm" required>
+                <label for="height_20mm">Normal (20mm)</label>
+                <input type="radio" name="height" id="height_20mm" value="height_20mm" required>
+                <label for="height_30mm">Borrador (30mm)</label>
+                <input type="radio" name="height" id="height_30mm" value="height_30mm" required>
+                <br><br>
+                <input type="submit" value="Solicitar cotizacion">
             </form>
         </div>
+
+        <h3>Comprobante de envio</h3>
+        <iframe src="" name="comprobante" width="700" height="900" frameborder="0"></iframe>
+
+
+        <footer style="margin-top: 128px;">
+            Pagina web desarrollada para la materia de Programacion Web 1.
+            Primavera 2025. Universidad Politecnica de San Luis Potosi
+            <br>
+            <a href="../index.html">Volver al portafolio de evidencias</a>
+        </footer>
     </div>
 </body>
 
