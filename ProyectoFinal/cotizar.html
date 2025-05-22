@@ -2,18 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XTREME 3D</title>
+    <style type="text/css"></style>
+	<link rel="stylesheet" href="assets/css/cotizar.css">
 </head>
 <body>
-    <form action="">
-        Material a usar
-        <select name="material" id="material">
-            <option value="">PLA</option>
-            <option value="">ABS</option>
-            <option value="">TPU</option>
-        </select>
-    </form>
+    <div class="contenedor">
+        <div class="topbar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+            <div class="socialMedia">
+                <img src="assets/img/FB.svg" alt="" >
+                <img src="assets/img/WA.svg" alt="" >
+                <img src="assets/img/IS.svg" alt="" >
+            </div>
+            <div class="shoppingCart">
+            </div>
+        </div>
+        <div class="navbar">
+            <a href="index.html" class="navButton">Inicio</a>
+            <a href="" class="navButton">Productos 3D</a>
+            <a href="cotizar.html" class="selected">Diseño 3D</a>
+            <a href="" class="navButton">Impresoras 3D</a>
+            <a href="" class="navButton">Insumos</a>
+        </div>
+        <div>
+            <form action="mailto:cotizar@xtreme3D.com.mx" method="post">
+                <label for="modelfile">Sube tu modelo:* </label>
+                <input type="file" name="modelfile" id="modelfile" required accept=".stl">
+                Material a utilizar:*
+                <select name="material" id="material" required>
+                    <option value="PLA">PLA</option>
+                    <option value="ABS">ABS</option>
+                    <option value="TPU">TPU</option>
+                </select>
+                <br><br>
+                Color:*
+                <br>
+                <label for="color_green"><span style="color: forestgreen; font-size: 3vh;">&#9632;</span> Verde</label>
+                <input type="radio" name="color" id="color_green" required>
+                <input type="submit" value="">
+            </form>
+        </div>
+    </div>
 </body>
 
 <script>
