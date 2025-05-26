@@ -15,12 +15,46 @@
         function generar()
         {
             var doc = new jsPDF();
+            var id = Math.floor(Math.random() * 1000) + 1 + (Math.floor(Math.random() * 10) * 1000);
+            var material = document.getElementById("material").value;
+            var fullPath = document.getElementById('modelfile').value;
+            if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+                }
+            }
+            var colors = document.getElementsByName("color");
+            var c;
+            for(i=0;i<colors.length;i++)
+            {
+                if(colors[i].checked)
+                {
+                    c = colors[i].value;
+                }
+            }
+            var heights = document.getElementsByName("height");
+            var h;
+            for(i=0;i<heights.length;i++)
+            {
+                if(heights[i].checked)
+                {
+                    h = heights[i].value;
+                }
+            }
             doc.setFontSize(36);
-            doc.setTextColor(100,150,0);
-            doc.text(30,30,"Hola Mundo");
-            doc.setFontSize(32);
-            doc.setTextColor(150,100,0);
-            doc.text(30,50,"Bienvenido a JavaScript");
+            doc.setTextColor(0,0,0);
+            doc.text(20,15,"XTREME 3D");
+            doc.setFontSize(30);
+            doc.text(20,25,"Comprobante de cotizacion.");
+            doc.setFontSize(12);
+            doc.text(20,50, "ID de cotizacion: " + id);
+            doc.text(20,55, "Nombre del archivo: " + filename);
+            doc.text(20,60, "Material a utilizar: " + material);
+            doc.text(20,65, "Color de filamento: " + c);
+            doc.text(20,70, "Altura de capa: " + h);
+            doc.text(20,120, "Si tienes dudas sobre el proceso de cotizacion no dudes en escribir un correo a hola@xtreme3d.com.mx")
             var string = doc.output('datauristring');
             $('iframe').attr('src', string);
         }
@@ -49,7 +83,7 @@
         <div>
             <form action="mailto:cotizar@xtreme3D.com.mx" method="post">
                 <label for="modelfile">Sube tu modelo:* </label>
-                <input type="file" name="modelfile" id="modelfile" required accept=".stl">
+                <input type="file" name="modelfile" id="modelfile" required accept=".stl"> <br><br>
                 Material a utilizar:*
                 <select name="material" id="material" required>
                     <option value="PLA">PLA</option>
@@ -60,23 +94,24 @@
                 Color:*
                 <br>
                 <label for="color_green"><span style="color: forestgreen; font-size: 3vh;">&#9632;</span> Verde</label>
-                <input type="radio" name="color" id="color_green" required value="color_green">
+                <input type="radio" name="color" id="color_green" required value="verde">
                 <label for="color_red"><span style="color: red; font-size: 3vh;">&#9632;</span> Rojo</label>
-                <input type="radio" name="color" id="color_red" required value="color_red">
+                <input type="radio" name="color" id="color_red" required value="rojo">
                 <label for="color_lightgray"><span style="color: lightgray; font-size: 3vh;">&#9632;</span> Gris claro</label>
-                <input type="radio" name="color" id="color_lightgray" required value="color_lightgray">
+                <input type="radio" name="color" id="color_lightgray" required value="gris claro">
                 <label for="color_block"><span style="color: black; font-size: 3vh;">&#9632;</span> Negro</label>
-                <input type="radio" name="color" id="color_black" required value="color_black">
+                <input type="radio" name="color" id="color_black" required value="negro">
                 <br><br>
                 Altura de capa:* <br>
                 <label for="height_10mm">Fino (10mm)</label>
-                <input type="radio" name="height" id="height_10mm" value="height_10mm" required>
+                <input type="radio" name="height" id="height_10mm" value="10mm" required>
                 <label for="height_20mm">Normal (20mm)</label>
-                <input type="radio" name="height" id="height_20mm" value="height_20mm" required>
+                <input type="radio" name="height" id="height_20mm" value="20mm" required>
                 <label for="height_30mm">Borrador (30mm)</label>
-                <input type="radio" name="height" id="height_30mm" value="height_30mm" required>
+                <input type="radio" name="height" id="height_30mm" value="30mm" required>
                 <br><br>
                 <input type="submit" value="Solicitar cotizacion">
+                <input type="button" value="Solicitar comprobante de entrega" onclick="generar()">
             </form>
         </div>
 
